@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ms-edgedevtools.vscode-edge-devtools",
+    "github.vscode-pull-request-github",
+    "dbaeumer.vscode-eslint",
+    "vmware.vscode-manifest-yaml",
+    "streetsidesoftware.code-spell-checker",
+    "esbenp.prettier-vscode",
+    "redhat.fabric8-analytics",
+    "sonarsource.sonarlint-vscode",
+    "redhat.vscode-yaml"
+  ]
+}

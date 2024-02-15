@@ -1,0 +1,51 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+  "name": "Learn Next.js App Router",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/java:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.vscode-yaml",
+        "Gruntfuggly.todo-tree",
+        "SonarSource.sonarlint-vscode",
+        "redhat.fabric8-analytics",
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "ms-edgedevtools.vscode-edge-devtools",
+        "yzhang.markdown-all-in-one",
+        "yzane.markdown-pdf",
+        "DavidAnson.vscode-markdownlint",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "VisualStudioExptTeam.vscodeintellicode-completions",
+        "oderwat.indent-rainbow",
+        "seatonjiang.gitmoji-vscode",
+        "donjayamanne.git-extension-pack",
+        "dbaeumer.vscode-eslint",
+        "streetsidesoftware.code-spell-checker",
+        "vmware.vscode-manifest-yaml",
+        "GitHub.vscode-pull-request-github"
+      ]
+    }
+  }
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "uname -a",
+
+  // Configure tool-specific properties.
+  // "customizations": {},
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
