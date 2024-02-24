@@ -33,7 +33,8 @@
         "streetsidesoftware.code-spell-checker",
         "vmware.vscode-manifest-yaml",
         "GitHub.vscode-pull-request-github",
-        "ms-vscode.live-server"
+        "ms-vscode.live-server",
+        "Prisma.prisma"
       ]
     }
   }
