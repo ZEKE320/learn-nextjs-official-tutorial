@@ -14,30 +14,30 @@ datasource db {
 }
 
 model user {
-  id       String @id @default(uuid())
-  name     String
-  email    String @unique
-  password String
+  id       String @id @default(uuid()) @db.Uuid
+  name     String @db.VarChar(255)
+  email    String @unique @db.Text
+  password String @db.Text
 }
 
 model customer {
-  id        String    @id @default(uuid())
-  name      String
-  email     String    @unique
-  image_url String
+  id        String    @id @default(uuid()) @db.Uuid
+  name      String    @db.VarChar(255)
+  email     String    @db.VarChar(255)
+  image_url String    @db.VarChar(255)
   invoices  invoice[]
 }
 
 model invoice {
-  id          String   @id @default(uuid())
-  customer_id String
+  id          String   @id @default(uuid()) @db.Uuid
+  customer_id String   @db.Uuid
   customer    customer @relation(fields: [customer_id], references: [id])
-  amount      Int
-  status      String
-  date        DateTime
+  amount      Int      @db.Integer
+  status      String   @db.VarChar(255)
+  date        DateTime @db.Date
 }
 
 model revenue {
-  month   String @unique
-  revenue Int
+  month   String @unique @db.VarChar(4)
+  revenue Int    @db.Integer
 }
