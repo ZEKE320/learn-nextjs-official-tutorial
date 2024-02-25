@@ -13,31 +13,31 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model user {
   id       String @id @default(uuid())
   name     String
   email    String @unique
   password String
 }
 
-model Customer {
+model customer {
   id        String    @id @default(uuid())
   name      String
   email     String    @unique
   image_url String
-  Invoice   Invoice[]
+  invoices  invoice[]
 }
 
-model Invoice {
+model invoice {
   id          String   @id @default(uuid())
   customer_id String
-  customer    Customer @relation(fields: [customer_id], references: [id])
+  customer    customer @relation(fields: [customer_id], references: [id])
   amount      Int
   status      String
   date        DateTime
 }
 
-model Revenue {
+model revenue {
   month   String @unique
   revenue Int
 }
