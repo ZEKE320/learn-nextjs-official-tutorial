@@ -1,12 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "next:build": "next build",
+    "next:dev": "next dev",
+    "next:start": "next start",
+    "pg:isready": "node ./scripts/pg_isready.js",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "start": "next start",
-    "seed": "node -r ./scripts/prisma_seed.js"
+    "prisma:seed": "node ./scripts/prisma_seed.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -30,7 +31,7 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",
     "@vercel/style-guide": "^5.0.1",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.5",
     "eslint": "^8.52.0",
     "eslint-config-next": "^14.0.0",
     "eslint-config-prettier": "9.0.0",
