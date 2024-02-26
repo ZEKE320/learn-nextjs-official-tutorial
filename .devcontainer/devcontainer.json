@@ -40,13 +40,15 @@
         "Prisma.prisma"
       ]
     }
-  }
+  },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "uname -a",
+  "postCreateCommand": {
+    "node": "npm i -g npm@latest && npm i"
+  }
 
   // Configure tool-specific properties.
   // "customizations": {},
